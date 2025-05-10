@@ -1,3 +1,3 @@
 # Improvements on PINN prediction of sharp gradients processes
 
-(TODO...)
+The Physics-Informed Neural Network (PINN)
