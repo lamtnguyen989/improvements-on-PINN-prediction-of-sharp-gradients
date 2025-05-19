@@ -6,10 +6,20 @@ Despite this, there are limitations however, mostly stem from the **Spectral Bia
 
 # Case Study
 
+We will primarily be investigating the performance of the PINN on the 1-dimensional Burger's equation
+
+$$ \begin{aligned} \frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x} - \nu  \frac{\partial^2 u}{\partial x^2} = 0 \end{aligned}$$
+
+where the viscocity parameter $\nu  \to  0$. More specifically, as [1] points out for $\nu < 0.01$, the solution approaches the inviscid case where the shock is not diffused out therefore standard PINNs will fail to converge to the correct solution, so it is suffices to set $\nu = 0.001$ for the investigation.
+
+In particular for benchmarking, we will compare the model's performance against the analytical solution on the spatial domain $x \in [-1,1]$ with time-evolution $t \in [0,1]$ and boundary conditions
+
+$$u(x,0) = -\sin(\pi x) \qquad u(-1,t) = u(1,t) = 0  $$
+
 # Models & Improvements
 
-# Summary
+# Summary & Remarks
 
 # References
 
-[1] M.Raissi, P. Perdikaris, G.E. Karniadakis *Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.* https://doi.org/10.1016/j.jcp.2018.10.045
+[1] M.Raissi, P. Perdikaris, G.E. Karniadakis. *Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.* https://doi.org/10.1016/j.jcp.2018.10.045
