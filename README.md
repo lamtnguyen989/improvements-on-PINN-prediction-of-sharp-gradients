@@ -16,10 +16,20 @@ In particular for benchmarking, we will compare the model's performance against 
 
 $$u(x,0) = -\sin(\pi x) \qquad u(-1,t) = u(1,t) = 0  $$
 
+To keep things as balanced as possible, we will set a fixed seed and fixed the general deep Multi Layer Perceptron (MLP)structure which have 2 input nodes (one for spatial and one for time variable) and 5 latent layers of 64 neurons each and one (scalar) output node
+
 # Models & Improvements
+
+## Basic PINN
+
+## Adaptive Viscocity (AV)
+
+
 
 # Summary & Remarks
 
 # References
 
 [1] M.Raissi, P. Perdikaris, G.E. Karniadakis. *Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations.* https://doi.org/10.1016/j.jcp.2018.10.045
+
+[2] E. Coutinho, M. Dall'Aqua, L. McClenny, M. Zhong, U. Braga-Neto, E. Gildin. *Physics-Informed Neural Networks with Adaptive Localized Artificial Viscosity*. [arXiv:2203.08802v1](https://doi.org/10.48550/arXiv.2203.08802)
